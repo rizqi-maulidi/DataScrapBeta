@@ -6,9 +6,9 @@ import schedule
 from datetime import datetime
 
 # Konfigurasi API
-DATASET_ID = "eOBtnoGJVkz24qlTr"
-TOKEN = "apify_api_oSkEWFUgIXtbeZyqMcSQ8yIB5DzK4E19ji48"
-BASE_URL = f"https://api.apify.com/v2/datasets/{DATASET_ID}/items"
+DATASET_ID = "ISI DISINI"
+TOKEN = "aISI DISINI"
+BASE_URL = f"ISI DISINI"
 
 # Parameter pagination
 LIMIT = 1000
