@@ -198,8 +198,8 @@ class InstagramCSVCleaner:
 
 # Main process
 def main():
-    DATASET_ID = "Tinggal Isi"  # ganti dengan dataset ID kamu
-    TOKEN = "Tinggal Isi"
+    DATASET_ID = "GVVBZaiBnMFDG2jmm"  # ganti dengan dataset ID kamu
+    TOKEN = "apify_api_oSkEWFUgIXtbeZyqMcSQ8yIB5DzK4E19ji48"
 
     cleaner = InstagramCSVCleaner(DATASET_ID, TOKEN)
     

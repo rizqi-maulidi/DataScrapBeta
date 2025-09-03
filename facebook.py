@@ -6,9 +6,9 @@ import schedule
 from datetime import datetime
 
 # Konfigurasi API
-DATASET_ID = "ISI DISINI"
-TOKEN = "aISI DISINI"
-BASE_URL = f"ISI DISINI"
+DATASET_ID = "eOBtnoGJVkz24qlTr"
+TOKEN = "apify_api_oSkEWFUgIXtbeZyqMcSQ8yIB5DzK4E19ji48"
+BASE_URL = f"https://api.apify.com/v2/datasets/{DATASET_ID}/items"
 
 # Parameter pagination
 LIMIT = 1000
@@ -62,7 +62,7 @@ def run_job():
     df["scraped_at"] = scraped_at
 
     # Simpan file utama
-    output_file_main = "facebook_politik_enhanced"
+    output_file_main = "facebook_politik_enhanced.csv"
     df.to_csv(output_file_main, index=False, encoding="utf-8-sig")
     print(f"✅ File utama disimpan: {output_file_main}")
 
@@ -82,10 +82,13 @@ def run_job():
                 })
     
     df_sna = pd.DataFrame(sna_records)
-    output_file_sna = "facebook_sna_relation"
+    output_file_sna = "facebook_sna_relation.csv"
     df_sna.to_csv(output_file_sna, index=False, encoding="utf-8-sig")
     print(f"✅ File SNA disimpan: {output_file_sna}")
     print("⏳ Job selesai.\n")
+
+# --- Jalankan sekali langsung saat start ---
+run_job()
 
 # --- Scheduler setiap 2 jam ---
 schedule.every(2).hours.do(run_job)
